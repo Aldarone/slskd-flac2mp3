@@ -1,0 +1,8 @@
+[
+  {
+    "id": "convert-to-mp3",
+    "execute-command": "/config/flac2mp3.bash",
+    "command-working-directory": "/downloads",
+    "pass-arguments-to-command": [{ "source": "payload", "name": "localFilename" }]
+  }
+]
