@@ -1,0 +1,16 @@
+[Container]
+Image=ghcr.io/aldarone/slskd-flac2mp3:latest
+AutoUpdate=registry
+Volume=__changeme__:/downloads:z
+Environment=PUID=0
+Environment=PGID=0
+Environment=TZ=__changeme__
+UserNS=
+HostName=slskd-webhook
+Network=slskd.network
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

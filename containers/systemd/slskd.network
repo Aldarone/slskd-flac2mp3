@@ -1,0 +1,7 @@
+[Unit]
+Description=SLSKD Network for the webhooks
+
+[Network]
+
+[Install]
+WantedBy=default.target
