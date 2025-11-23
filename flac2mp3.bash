@@ -14,6 +14,6 @@ echo "File ext: $_FILE_EXT"
 
 for ext in ${_CONVERSION_EXT_LIST[@]}; do
     if [ "$_FILE_EXT" = "$ext" ]; then
-        ffmpeg -i "${_FILE_FULL_NAME}" -y -b:a 320k -map 0 -map -0:v -ac 2 -ar 44100 "${_FILE_BASE_NAME}.mp3" && rm "${_FILE_FULL_NAME}"
+        ffmpeg -i "${_FILE_FULL_NAME}" -y -b:a 128k -map 0 -map -0:v -ac 2 "${_FILE_BASE_NAME}.opus" && rm "${_FILE_FULL_NAME}"
     fi
 done
